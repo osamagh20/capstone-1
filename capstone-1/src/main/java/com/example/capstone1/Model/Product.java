@@ -20,6 +20,6 @@ public class Product {
     private double price;
     @NotEmpty(message = "Enter the category id")
     private String categoryId;
-    private String comment;
+    private String comment; 
 
 }
