@@ -147,11 +147,12 @@ public class UserService {
 
     // extra-4 (write comment)
     public String commentProduct(String ida,String idp,String comment){
+
         for (int i = 0; i < users.size(); i++) {
             if(users.get(i).getId().equals(ida)){
                 for (int j = 0; j < productService.Products.size(); j++) {
                     if(productService.getProducts().get(j).getId().equals(idp)){
-                        productService.getProducts().get(j).setComment("("+comment+")");
+                        productService.getProducts().get(j).setComments(productService.getProducts().get(j).getComments()+("("+comment+")"));
                         return "Done comment";
                     }
                 }
